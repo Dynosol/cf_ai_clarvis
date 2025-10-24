@@ -1,4 +1,4 @@
-<General instrucitons>
+gi<General instrucitons>
 <MANDATORY>
 - never use emojis
 - never comment code unless specifically asked to, or if a given snippet includes comments.
@@ -1307,3 +1307,24 @@ file: /Users/sol/dev/cloudflare-project/clarvis-extension/extension/src/styles.c
 sol@sol extension % 
 
 
+
+
+vite v7.1.12 building for production...
+✓ 25 modules transformed.
+✗ Build failed in 290ms
+error during build:
+[vite]: Rollup failed to resolve import "marked" from "/Users/sol/dev/cloudflare-project/cf_ai_clarvis/extension/src/components/memoized-markdown.tsx".
+This is most likely unintended because it can break your application at runtime.
+If you do want to externalize this module explicitly add it to
+`build.rollupOptions.external`
+    at viteLog (file:///Users/sol/dev/cloudflare-project/cf_ai_clarvis/extension/node_modules/vite/dist/node/chunks/config.js:33865:57)
+    at file:///Users/sol/dev/cloudflare-project/cf_ai_clarvis/extension/node_modules/vite/dist/node/chunks/config.js:33899:73
+    at onwarn (file:///Users/sol/dev/cloudflare-project/cf_ai_clarvis/extension/node_modules/@vitejs/plugin-react/dist/index.js:55:7)
+    at file:///Users/sol/dev/cloudflare-project/cf_ai_clarvis/extension/node_modules/vite/dist/node/chunks/config.js:33899:28
+    at onRollupLog (file:///Users/sol/dev/cloudflare-project/cf_ai_clarvis/extension/node_modules/vite/dist/node/chunks/config.js:33894:63)
+    at onLog (file:///Users/sol/dev/cloudflare-project/cf_ai_clarvis/extension/node_modules/vite/dist/node/chunks/config.js:33697:4)
+    at file:///Users/sol/dev/cloudflare-project/cf_ai_clarvis/extension/node_modules/rollup/dist/es/shared/node-entry.js:20937:32
+    at Object.logger [as onLog] (file:///Users/sol/dev/cloudflare-project/cf_ai_clarvis/extension/node_modules/rollup/dist/es/shared/node-entry.js:22823:9)
+    at ModuleLoader.handleInvalidResolvedId (file:///Users/sol/dev/cloudflare-project/cf_ai_clarvis/extension/node_modules/rollup/dist/es/shared/node-entry.js:21567:26)
+    at file:///Users/sol/dev/cloudflare-project/cf_ai_clarvis/extension/node_modules/rollup/dist/es/shared/node-entry.js:21525:26
+sol@sol extension % 
