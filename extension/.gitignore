@@ -1,0 +1,72 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+dist-ssr/
+*.crx
+*.pem
+*.zip
+web-ext-artifacts/
+
+# Environment variables and secrets
+.env
+.env.local
+.env.development
+.env.production
+.env.*.local
+*.env
+
+# Extension private keys (CRITICAL - never commit these!)
+*.pem
+key.pem
+private-key.pem
+
+# Chrome extension packaged files
+*.crx
+*.zip
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Temporary files
+*.local
+*.tmp
+*.temp
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+desktop.ini
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swp
+*.swo
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Cache
+.cache/
+.eslintcache
+.stylelintcache
+
+# Debug
+.vite-inspect/

@@ -1,0 +1,22 @@
+{
+  "name": "clarvis-project",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI-powered browser extension with Cloudflare backend",
+  "scripts": {
+    "dev:backend": "cd backend && npm run dev",
+    "dev:extension": "cd extension && npm run dev",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:extension\"",
+    "build:backend": "cd backend && npm run deploy",
+    "build:extension": "cd extension && npm run build",
+    "build": "npm run build:extension && npm run build:backend",
+    "deploy:backend": "cd backend && npm run deploy",
+    "install:all": "npm install && cd backend && npm install && cd ../extension && npm install"
+  },
+  "dependencies": {
+    "@types/chrome": "^0.1.24"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

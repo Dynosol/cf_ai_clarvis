@@ -1,0 +1,64 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "clarvis-backend",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-10-23",
+	"compatibility_flags": ["nodejs_compat"],
+	"observability": {
+		"enabled": true
+	},
+	/**
+	 * Durable Objects - Agents
+	 * Agents are built on Durable Objects, providing stateful, scalable AI agents
+	 * https://developers.cloudflare.com/agents/
+	 */
+	"durable_objects": {
+		"bindings": [
+			{
+				"name": "ChatAgent",
+				"class_name": "ChatAgent"
+			}
+		]
+	},
+	/**
+	 * Migrations for Durable Objects
+	 * Enables SQL storage for each agent instance
+	 */
+	"migrations": [
+		{
+			"tag": "v1",
+			"new_sqlite_classes": ["ChatAgent"]
+		}
+	],
+	/**
+	 * Workers AI Binding
+	 * Access to Cloudflare's AI models for inference
+	 * https://developers.cloudflare.com/workers-ai/
+	 */
+	"ai": {
+		"binding": "AI"
+	},
+	/**
+	 * Workflows
+	 * For long-running, asynchronous tasks
+	 * https://developers.cloudflare.com/workflows/
+	 */
+	"workflows": [
+		{
+			"name": "study-material-generator",
+			"binding": "STUDY_MATERIAL_WORKFLOW",
+			"class_name": "StudyMaterialWorkflow"
+		}
+	],
+	/**
+	 * Development server configuration
+	 * Ensures the backend runs on port 8787
+	 */
+	"dev": {
+		"port": 8787
+	}
+}

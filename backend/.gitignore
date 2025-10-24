@@ -1,0 +1,53 @@
+# Cloudflare Workers specific
+.wrangler/
+.mf/
+.dev.vars
+wrangler.toml
+*.toml
+
+# Environment variables and secrets
+.env
+.env.local
+.env.development
+.env.production
+.env.*.local
+*.env
+
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+worker/
+.esbuild/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+*.tmp
+*.temp
+
+# OS files
+.DS_Store
+
+# IDE files
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Worker secrets and configuration files that may contain sensitive data
+# Note: wrangler.jsonc is typically safe, but any file with actual secrets should be here
+secrets.json
+local.json
+
