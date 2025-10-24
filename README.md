@@ -1,4 +1,4 @@
-# Clarvis - AI Chat Extension
+# Clarvis - AI Chat Browser Extension
 
 An AI-powered Chrome extension that provides an intelligent chat assistant with awareness of your current page context. Generate study materials, ask questions, and get help understanding web content.
 
@@ -6,9 +6,10 @@ An AI-powered Chrome extension that provides an intelligent chat assistant with 
 
 ### Backend
 
-1. Navigate to the backend folder:
+1. Navigate to the backend folder and install dependencies:
 ```bash
 cd backend
+npm install
 ```
 
 2. Run the development server:
@@ -20,9 +21,10 @@ The backend will start on Cloudflare Workers local development environment.
 
 ### Frontend (Chrome Extension)
 
-1. Navigate to the extension folder:
+1. Navigate to the extension folder and install dependencies:
 ```bash
 cd extension
+npm install
 ```
 
 2. Build the extension:
